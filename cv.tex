@@ -1,12 +1,60 @@
 \documentclass[9pt,a4paper,sans]{moderncv}
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{casual} % CV theme - options input: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}
 \usepackage{lipsum}
 \usepackage[scale=0.75]{geometry}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
+%%\usepackage[spanish]{babel}
 \usepackage{bibunits}
 
-\include{csrocha.en}
+\newcommand{\Q}{{\textsf{Q}\hspace*{-1.1ex}%
+  \rule{0.15ex}{1.5ex}\hspace*{1.1ex}}}
+\newcommand{\Cuat}{º\Q~}
+\newcommand{\actual}{$\infty$}
+\newcommand{\vat}{CUIT}
+\newcommand{\birthdate}{Fecha de Nacimiento}
 
+\firstname{Cristian Sebastian}
+\familyname{Rocha}
+
+\title{Curriculum Vitae}
+\address{Av. Combatientes de Malvinas 3766 Dpto 2}{Buenos Aires, Capital Federal (1407)}
+\phone[mobile]{(+54-911)~6800~0269}
+%%\phone[fixes]{(+54-11)~4635~8436}
+\email{cristian.s.rocha@jpmorgan.com;csrocha@gmail.com}
+\homepage{https://github.com/csrocha}
+
+\extrainfo{\vat 23-25095454-9 - \birthdate: 4 dic 1975}
+%%\photo[70pt][0pt]{csrocha.png} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%%\quote{"The important thing, once you have enough to eat and a nice house, is what you can do for others, what you can contribute to the enterprise as a whole." - Donald Knuth}
+
+\begin{document}
+
+\makecvtitle
+
+\label{profesionales:desde}
+\input{sec_profesionales}
+\label{profesionales:hasta}
+
+\label{cientificos:desde}
+\input{sec_cientificos}
+\input{sec_congresos}
+\input{sec_publicaciones}
+\input{sec_tesis}
+\label{cientificos:hasta}
+
+\label{extension:desde}
+\input{sec_extension}
+\label{extension:hasta}
+
+\label{docentes:desde}
+\input{sec_docentes}
+\label{docentes:hasta}
+
+\label{otros:desde}
+\input{sec_titulos}
+\label{otros:hasta}
+
+\end{document}
