@@ -1,22 +1,35 @@
+\documentclass[9pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual} % CV theme - options input: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}
+\usepackage{lipsum}
+\usepackage[scale=0.75]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+%%\usepackage[spanish]{babel}
+\usepackage{bibunits}
+\usepackage{xcolor}
 
 \newcommand{\Q}{{\textsf{Q}\hspace*{-1.1ex}%
   \rule{0.15ex}{1.5ex}\hspace*{1.1ex}}}
 \newcommand{\Cuat}{º\Q~}
 \newcommand{\actual}{$\infty$}
+\newcommand{\vat}{CUIT}
+\newcommand{\birthdate}{Fecha de Nacimiento}
+
 
 \firstname{Cristian Sebastian}
 \familyname{Rocha}
 
 \title{Curriculum Vitae}
-%\address{Av. Rivadaivia 9858 8°D}{Buenos Aires, Capital Federal (1407)}
-%\phone[mobile]{(+54-911)~6800~0269}
-%\phone[fixes]{(+54-11)~4635~8436}
-\email{cristian.rocha@moldeo.coop}
+\address{Lavalle 2294 2°}{Villa Ballester, Buenos Aires (1653)}
+\phone[mobile]{(+54-911)~6800~0269}
+\email{csrocha@gmail.com}
 \homepage{http://www.github.com/csrocha/}
 
-\extrainfo{CUIT 23-25095454-9 - Birth Date 4 dic 1975}
-\photo[70pt][0pt]{csrocha.png} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"The important thing, once you have enough to eat and a nice house, is what you can do for others, what you can contribute to the enterprise as a whole." - Donald Knuth}
+\extrainfo{Birth Date 4 dic 1975}
+%\photo[70pt][0pt]{csrocha.png} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"The important thing, once you have enough to eat and a nice house, is what you can do for others, what you can contribute to the enterprise as a whole." - Donald Knuth}
 
 \newcommand{\DC}{Computer Department}
 \newcommand{\FCEN}{Faculty of Science}
@@ -30,7 +43,7 @@
 \section{Education}\label{otros:desde}
 
 \cventry{2004-2012}
-	{Delayed PHd Student, \FCEN, \UBA.}
+	{Delayed PHd. Student, \FCEN, \UBA.}
 	{\UBA.}
 	{Buenos Aires, Argentina}
 	{}
@@ -45,9 +58,9 @@
 	{}
 	{\emph{MSc Thesis:} Algorithms to identify Genomics Repetitions in Random Sequencing Methods. \emph{Supervisor:} PHd. Irene loiseau.}
 \cventry{2001}
-	{Trainer in Bioinformatics - International Training Course on Bioinformatics (Computational Biology) Applied to Genomic.}
-	{Oswaldo Cruz Foundation - UNDP/World Bank/WHO Special Programme for Research and Training in Tropical Diseases, TDR}
-	{Rio de Janeriro, Brasil.}
+	{Trainer in Bioinformatics}
+	{International Training Course on Bioinformatics (Computational Biology) Applied to Genomic. Oswaldo Cruz Foundation - UNDP/World Bank/WHO Special Programme for Research and Training in Tropical Diseases, TDR}
+	{Rio de Janeiro, Brazil.}
 	{}
 	{http://www.who.int/tdr/publications/tdrnews/news68/bioinformatics.htm}
 \cventry{1995}
@@ -60,7 +73,7 @@
 \section{Skills}
 \cventry{Language}
         {English}
-        {Good in read, write and talk technician english}
+        {Good in read, Intermediate write and talk}
         {}
         {}
         {}
@@ -70,52 +83,83 @@
         {}
         {}
         {}
-\cventry{Math \& Statistics Applications}
-	{Lineal Algebra for Computer Graphics, Moleculars and Physics Simulations models. Partial differential equations for Simulation of Physics models. Correlation, Convolution (Fourier) for signal processing in 2D and 3D discrete structures for Image and Molecular processing. Solve nonlinear equations for Machine Learning and Datamining. Optimal and suboptimal solutions for discrete mathematics problems. Geostatistics for region classification. Algorithms for identify structures in pseudo-random generated strings}
+\cventry{Project Management}
+        {Agile and Traditional}
 	{}
+        {Scrum Participant; Waterfall V-Model ; Management techniques: Critical Path, Gantt ; Tools: Taskjuggler}
 	{}
 	{}
 	{}
 \cventry{Software Engineering}
-        {Object Oriented Design, Design by Contract ; Unit Testing, Integration Testing, Functional Testing ; DER, UML; Control Version: CVS, SVN, GitHub, Bazaar, Mercurial}
+	{Full stack designer and developer}
+        {Object Oriented Design, Design by Contract ; Unit Testing, Integration Testing, Functional Testing ; DER, UML, BPML}
         {}
         {}
         {}
         {}
-\cventry{Project Management}
-        {Critical Path, Gantt, V-Model, Scrum}
+\cventry{Site Reliability Engineering}
+        {Application, Platform and Infra structure automatization}
+        {Toil identification and automatization ; DevOps process automatization ; Control Version: CVS, SVN, GitHub, Bazaar, Mercurial ; Deployment Pipelines: Jenkins as developer}
         {}
         {}
         {}
         {}
 \cventry{Programming}
-        {Python (10 years), Javascript (5 years), R (5 years), C (15 years), C++ (12 years), CSH (10 years), BASH (10 years), MathLab (5 years), SAS (3 years), Assembler (12 years)}
         {Senior}
+        {Python (17 years), Javascript (5 years), R (5 years), C (19 years), C++ (17 years), CSH (20 years), BASH (20 years), MathLab (5 years), SAS (3 years), Assembler (12 years)}
         {}
         {}
         {}
 \cventry{}
-        {Java (2 years), Haskell (1 year), Ada (1 year), Eiffel (1 year), Tcl (1 year), Visual Basic (3 year)}
         {Junior}
+        {Java (2 years), Haskell (1 year), Ada (1 year), Eiffel (1 year), Tcl (1 year), Visual Basic (3 year)}
         {}
         {}
         {}
 \cventry{Databases}
-        {Relational Databases: Postgresql, MySQL, Sqlite, SQLServer; NoSQL: MongoDB; Object Oriented: ZODB - Plone; Directories: LDAP}
         {Modeling, Implementation and management. Query and management languages.}
+        {Relational Databases: Postgresql, MySQL, Sqlite, SQLServer; NoSQL: Cassandra, MongoDB; Object Oriented: ZODB - Plone; Directories: LDAP}
+        {ORM: Alchemy, Odoo}
+        {}
+        {}
+\cventry{Cloud Computing}
+        {Platform as a Service and Lambdas}
+	{Cloud Foundry, AWS as Developer and SRE/DevOps}
+        {}
+        {}
+        {}
+\cventry{Machine Learning}
+	{Algorithm Developer, Learning System Designer}
+	{Implementation of geostatistics algorithms for common characters and proximity clustering ; ETL development for data-warehouse adaptation ; Report generation for supervised and non supervised learning algorithms ; Setup and usage of bioinformatics algorithms to query proteins functions and genes. }
+        {}
         {}
         {}
         {}
 \cventry{Other Technologies}
-        {CISC, SPARK, ARM, GPU, Tesla; HTML, CSS, XSLT, YAML, CSV; IP, IPv6, ICMP, Name, SMTP, AWS, Tomcat, RPC, XML-RPC}
         {Integration from low level to high level abstractions.}
+        {CISC, SPARK, ARM, GPU, Tesla; HTML, CSS, XSLT, YAML, CSV; IP, IPv6, ICMP, Name, SMTP, AWS, Tomcat, RPC, XML-RPC}
         {}
         {}
         {}
+\cventry{Math \& Statistics Applications}
+	{Researching}
+	{Lineal Algebra for Computer Graphics, Molecular and Physics Simulations models. Partial differential equations for Simulation of Physics models. Correlation, Convolution (Fourier) for signal processing in 2D and 3D discrete structures for Image and Molecular processing. Solve nonlinear equations for Machine Learning and Data mining. Optimal and suboptimal solutions for discrete mathematics problems. Geostatistics for region classification. Algorithms for identify structures in pseudo-random generated strings}
+	{}
+	{}
+	{}
 
 \section{Professional Background}\label{profesional:desde}
 
-\cventry{2009-\actual}
+\cventry{2016-\actual}
+	{Associate}
+	{JPMorgan Services}
+	{Buenos Aires, Argentina}
+	{}
+	{\begin{description}
+	 \item [2018-\actual] Site Reliability Engineering ; Toil removing by infrastructure application automatize; CI/CD trainer.
+	 \item [2016-2018] Market Data Acquisition ; EOD Jobs maintaner ; PNL reports modeling ; Process automatize; FXO/FXCash Front End Support; Move solutions to the Cloud.
+         \end{description}}
+\cventry{2009-2016}
 	{Cooperative Entrepreneur}
 	{Cooperativa de Trabajo Moldeo Interactive Limitada.}
 	{Buenos Aires, Argentina}
@@ -124,14 +168,14 @@
 	\item [Professional Activity] Senior Consultant Analyst
 	\item [Proyectos]
 	\begin{description}
-		\item [Moldeo:] Main Developer. OpenSource system to process signal and render to visualize information in real time using GPU.
+		\item [Moldeo:] Main Developer. Open Source system to process signal and render to visualize information in real time using GPU.
 		\item [Fiscal Printer on The Cloud:] Main Developer. Let to Fiscal Printer connect to SAAS services in the Cloud as Chrome Application.
-		\item [Argentine Odoo Localization:] Main Developer. OpenSource Administrative Software.
-		\item [Argentine PyMES Observatory and Bolognia University:] Consultant to develop Pool and Survey Automatization. Project Leader in geo-statistics information publisher for latinamerica industry.
+		\item [Argentine Odoo Localization:] Main Developer. Open Source Administrative Software.
+		\item [Argentine PyMES Observatory and Bolognia University:] Consultant to develop Pool and Survey Automatization. Project Leader in geo-statistics information publisher for Latin America industry.
 		\item [MiERP:] SAAS Administrative Software.
 		\item [SAS ABT Builder:] Developer of ABT Builder System for SAS education Argentina.
-		\item [Senior SAS Consultant:] Consultor in Marketing Automation y Banking Intelligent Solutions. Tecnical Reference in the Software Factory of Telecom Personal.
-		\item [System to search appropiated childrens during the military dictatorship:] Main Designer and Developer. For the Argentine Procurator Ministery, and Sadosky Fundation.
+		\item [Senior SAS Consultant:] Consulter in Marketing Automation y Banking Intelligent Solutions. Technical Reference in the Software Factory of Telecom Personal.
+		\item [System to search appropiated childrens during the military dictatorship:] Main Designer and Developer. For the Argentine Procurator Ministry, and Sadosky Foundation.
 	\end{description}
 	\end{description}}
 \cventry{2009-2010}
@@ -151,7 +195,7 @@
 	{\UBA, FCEyN, UBA.}
 	{Buenos Aires, Argentina}
 	{}
-	{Administrator of the Network and diferentes Process Servers. (Irix, Solaris, Tru64, Linux)}
+	{Administrator of the Network and different Process Servers. (Irix, Solaris, Tru64, Linux). Scripting in Python.}
 \cventry{2000}
 	{Freelance Developer}
 	{}
@@ -180,7 +224,7 @@
 
 \section{Teaching Background}\label{docentes:desde}
 
-\cventry{1999-}
+\cventry{1999-2017}
         {Teaching Assistant}
 	{\DC, \FCEN, \UBA, Argentina}
 	{Buenos Aires, Argentina}
@@ -190,7 +234,7 @@
 		the MSc in Geology, and the MSc in Molecular Biology for Medicine of University of Buenos Aires.
 	\item Some of these course are \emph{Data Structure and Algorithms},
 		\emph{Computer Organization and Architecture}, \emph{Data Bases},
-		\emph{Software Ingineering}, \emph{Introduction to Computer Science for Geology},
+		\emph{Software Engineering}, \emph{Introduction to Computer Science for Geology},
 		and \emph{Introduction to Bioinformatics}.
 	\end{itemize}}
 
@@ -248,13 +292,13 @@
 \section{MSc Thesis director}
 
 \cventry{Mayo del 2008}
-	{Identificacion de detalles estructurales en proteínas mediante el método de búsqueda de subgrafos isomorfos frecuentes. Lic. Areum Lee}
+	{Identificacion de detalles estructurales en proteínas mediante el método de búsqueda de subgrafos isomorfos frecuentes - Identification of structure protein details by isomorph sub-graphs ; Lic. Areum Lee}
 	{\DC, \FCEN, \UBA.}
 	{Buenos Aires, Argentina}
 	{}
 	{\emph{Supervisor:} Phd. Turjanski, Adrián; \emph{Codirector:} Lic. Cristian S. Rocha.}
 \cventry{Noviembre del 2009}
-	{Alineamiento de Movimientos Vibracionales para el Estudio Evolutivo de las Dinámicas de Proteínas. Lic. Lucila Sanjurjo} 
+	{Alineamiento de Movimientos Vibracionales para el Estudio Evolutivo de las Dinámicas de Proteínas - Vibrational movements alignments for study of evolution protein dynamics. Lic. Lucila Sanjurjo} 
 	{\DC, \FCEN, \UBA.}
 	{Buenos Aires, Argentina}
 	{}

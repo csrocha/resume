@@ -3,6 +3,7 @@
 *.out
 *.bbl
 *.blg
+*.pdf
 .*.swp
 
 
