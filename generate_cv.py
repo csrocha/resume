@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Generate a targeted CV in LaTeX from the Spanish source sections using Claude."""
+"""Generate a targeted CV in LaTeX from the Spanish source sections using Gemini."""
 
 import argparse
 import subprocess
 import sys
 from pathlib import Path
 
-import anthropic
+from google import genai
+from google.genai import types
 
 REPO_DIR = Path(__file__).parent
 
@@ -100,42 +101,26 @@ def load_source() -> str:
 
 
 def generate_body(source: str, target: str, lang: str) -> str:
-    client = anthropic.Anthropic()
+    client = genai.Client()
     lang_name = "Spanish" if lang == "es" else "English"
 
-    message = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=4096,
-        system=[
-            {
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }
-        ],
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": f"Source CV (Spanish, moderncv LaTeX):\n\n{source}",
-                        "cache_control": {"type": "ephemeral"},
-                    },
-                    {
-                        "type": "text",
-                        "text": (
-                            f"Target profile: {target}\n\n"
-                            f"Generate the tailored CV body in {lang_name}. "
-                            "Output only LaTeX body content — no preamble."
-                        ),
-                    },
-                ],
-            }
-        ],
+    response = client.models.generate_content(
+        model="models/gemini-flash-latest",
+        config=types.GenerateContentConfig(
+            system_instruction=SYSTEM_PROMPT,
+            max_output_tokens=4096,
+            temperature=0.3,
+        ),
+        contents=(
+            f"Source CV (Spanish, moderncv LaTeX):\n\n{source}\n\n"
+            f"---\n\n"
+            f"Target profile: {target}\n\n"
+            f"Generate the tailored CV body in {lang_name}. "
+            "Output only LaTeX body content — no preamble."
+        ),
     )
 
-    return message.content[0].text
+    return response.text
 
 
 def assemble_tex(body: str, lang: str) -> str:
@@ -173,7 +158,7 @@ def main() -> None:
     print("Loading source sections...")
     source = load_source()
 
-    print("Generating tailored CV body with Claude...")
+    print("Generating tailored CV body with Gemini...")
     body = generate_body(source, args.target, args.lang)
 
     tex_path = REPO_DIR / f"{args.output}.tex"
