@@ -5,5 +5,7 @@
 *.blg
 *.pdf
 .*.swp
-
-
+proposes/
+historical/
+cv_output_prompt.txt
+.sf/orgs/00D1N000001T30JUAS/metadata-catalog/catalog.json
