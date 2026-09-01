@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdflatex -interaction=nonstopmode cv_dialpad_2026.tex)"
+    ]
+  }
+}
