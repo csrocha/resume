@@ -7,10 +7,11 @@
 	{}
 	{Como CTO en la Fundación Observatorio PyME, se me han encomendado responsabilidades clave, que incluyen:
 	\begin{description}
-		\item[Industrialización de Datos]: Automatización de punta a punta de los procesos internos de la fundación para simplificar la generación de estadísticas, páginas interactivas y reportes. Diseño y desarrollo de agentes IA para identificar fallas en el procesamiento y realizar consultas de situación a nivel microdato y estadístico. Diseño y desarrollo de \emph{geaiq\_mdp}, una plataforma CLI propia en Python para validar y desplegar metadatos geoeconómicos de más de 20 países contra BigQuery y PostgreSQL, con generación automática de reportes HTML/Markdown. Orquestación del pipeline completo con Apache Airflow, incluyendo notificaciones por webhook y trazabilidad por ejecución.
+		\item[Industrialización de Datos]: Automatización de punta a punta de los procesos internos de la fundación para simplificar la generación de estadísticas, páginas interactivas y reportes. Diseño y desarrollo de agentes IA para identificar fallas en el procesamiento y realizar consultas de situación a nivel microdato y estadístico. Diseño y desarrollo de \emph{geaiq\_mdp}, una plataforma CLI propia en Python para validar y desplegar metadatos geoeconómicos de más de 20 países contra BigQuery y PostgreSQL, con generación automática de reportes HTML/Markdown. Orquestación del pipeline completo con Apache Airflow, incluyendo notificaciones por webhook, reportes HTML por ejecución y nuevos pipelines de integración con fuentes fiscales externas (AFIP/ARCA: Padrón A5, Constancia de Inscripción y geocodificación de domicilios fiscales vía Google Geocoding API).
+			\item[Plataforma de Agentes de IA en Odoo:] Diseño y desarrollo de un ecosistema propio de agentes de IA embebido en Odoo (\emph{odoo\_ai\_core}), compuesto por más de 20 agentes especializados (arquitectura, desarrollo, administración de sistemas, memoria persistente, onboarding, tareas remotas, entre otros), con sistema de instrucciones, control de costos de tokens LLM y conectores a herramientas externas (Git, GitHub mediante una GitHub App propia, Google Docs/Sheets, BigQuery, Nominatim).
 		\item[Tooltips Inteligentes de Modelos de Scores]: Creación de una plataforma de cálculo de scoring de empresas PyMEs. Presentación de los resultados con textos generados en batch por IA generativa para más de 3000 explicaciones de los resultados, por dimensión de modelo.
 		\item[Infraestructura de Curación de Datos:] Supervisar el establecimiento y gestión de la infraestructura de curación de datos, garantizando un procesamiento preciso y confiable de los datos para generar indicadores económicos, estructurales y sectoriales relevantes para las PYMEs. Migración de fuentes de datos de BigQuery a PostgreSQL con validación automática de esquemas y geometrías (CRS, shapefiles) para asegurar la consistencia de indicadores geográficos en más de 20 países.
-		\item[Desarrollo de Productos:] Liderar el desarrollo de productos innovadores que aprovechen los indicadores generados, como la creación de aplicaciones amigables para el usuario y plataformas en línea para brindar a las partes interesadas acceso a datos relevantes y accionables. Diseño de un microservicio en FastAPI que integra TaskJuggler para la planificación de proyectos, comparando escenarios base y escenarios asistidos por IA dentro de un módulo de gestión de proyectos en Odoo.
+		\item[Desarrollo de Productos:] Liderar el desarrollo de productos innovadores que aprovechen los indicadores generados, como la creación de aplicaciones amigables para el usuario y plataformas en línea para brindar a las partes interesadas acceso a datos relevantes y accionables. Diseño de un microservicio en FastAPI que integra TaskJuggler para la planificación de proyectos, comparando escenarios base y escenarios asistidos por IA dentro de un módulo de gestión de proyectos en Odoo, con métricas de valor ganado (EVM: CPI/SPI), buffers de riesgo tipo PERT y escenarios compartibles entre proyectos.
 		\item[Estrategia Tecnológica:] Definir y encabezar la estrategia tecnológica de la organización, explorar y adoptar tecnologías de vanguardia, implementar sistemas de software e identificar oportunidades para mejorar la eficiencia y productividad.
 		\item[Desarrollo y Mantenimiento:] Supervisar el desarrollo y mantenimiento de sistemas y herramientas sólidos, incluyendo software y hardware, para garantizar operaciones sin problemas y un rendimiento óptimo. Modernización de la infraestructura de Odoo Enterprise: contenerización con Docker, migración del proxy reverso a Caddy y automatización de builds e imágenes.
 		\item[Liderazgo del Equipo Tecnológico:] Proporcionar un liderazgo visionario al equipo tecnológico, fomentando un equipo de programadores, ingenieros de software, administradores de bases de datos y profesionales de tecnología altamente capacitados y motivados. Establecer objetivos claros, supervisar el rendimiento y brindar orientación para lograr el éxito.
@@ -34,19 +35,27 @@
 	\item[Modelo de negocio:] SaaS por créditos (pago por día activo de propiedad), integrado con Mercado Pago.
 	\end{description}}
 
-\cventry{2015-2026}
+\cventry{2015-\actual}
 	{Fundador y Desarrollador Principal}
 	{EULAC / GeoEcon / GeaIQ (proyecto propio)}
 	{Buenos Aires, Argentina}
 	{}
-	{Diseño y desarrollo de punta a punta de una plataforma de información geoestadística, evolucionada a lo largo de una década en tres generaciones (EULAC 2015 $\to$ GeoEcon 2018 $\to$ GeaIQ 2025). Responsable técnico principal durante la primera etapa del desarrollo; luego se incorporaron perfiles de diseño y frontend al equipo.
+	{Diseño y desarrollo de punta a punta de una plataforma de información geoestadística, evolucionada a lo largo de una década en tres generaciones (EULAC 2015 $\to$ GeoEcon 2018 $\to$ GeaIQ 2025), en paralelo a mi rol en la Fundación Observatorio PyME. Responsable técnico principal durante toda la vida del proyecto; luego se incorporaron perfiles de diseño y frontend al equipo.
 	\begin{description}
 	\item[Información Geoestadística y Clasificación de Regiones:] Diseño de modelos de datos y pipelines para estructurar y presentar indicadores geoeconómicos y geoestadísticos multidimensionales a nivel regional. Algoritmos de clasificación de regiones no estocásticos (deterministas) implementados originalmente en R y luego migrados a Python.
 	\item[Procesamiento Serverless y Algoritmos Propios:] Funciones y tareas serverless para la ejecución asincrónica de procesamiento de datos de alta demanda computacional: k-means y algoritmos propios continuos y estocásticos (patentados), con control de acceso de grano fino sobre los datos procesados.
 	\item[API y Frontend:] Diseño de una API RESTful para la entrega de datos al frontend, desarrollado principalmente en JavaScript y luego migrado a TypeScript.
 	\item[Infraestructura de Datos:] Evolución de la base de datos en tres etapas por necesidades de escala y costo: SQLite con extensión geográfica (SpatiaLite) en el arranque del proyecto, migración a BigQuery, y finalmente a PostgreSQL con extensión GIS (PostGIS) para controlar costos operativos.
-	\item[Evolución del Producto:] Iteración del producto en tres generaciones, desde una plataforma de datos inicial (EULAC) pasando por GeoEcon hasta una versión con integración de IA generativa (GeaIQ), discontinuada en 2026 para redirigir el foco a oportunidades financiadas con equipo.
+	\item[Plataforma de Datos Multiusuario:] Diseño de una plataforma de datos self-hosted (Docker Compose) con JupyterHub, Apache Airflow y PostgreSQL con seguridad a nivel de fila (Row-Level Security), bajo un modelo de gobernanza Data Engineer/Data Scientist: sandboxes personales por usuario para exploración, con promoción de la lógica validada a pipelines productivos. CI/CD propio vía GitHub Actions y capa de API Gateway propia con autenticación OAuth2 mediante GitHub App y JWT.
+	\item[Evolución del Producto:] Iteración del producto en tres generaciones, desde una plataforma de datos inicial (EULAC) pasando por GeoEcon hasta una versión con integración de IA generativa y asistente conversacional (GeaIQ), en desarrollo continuo.
 	\end{description}}
+
+\cventry{feb 2026}
+	{Colaborador Open Source}
+	{Aider (fork propio)}
+	{Buenos Aires, Argentina}
+	{}
+	{Desarrollo de soporte para submódulos Git en Aider, herramienta open source de programación asistida por IA en terminal: detección y resolución de repositorios en submódulos, permisos de edición de archivos, commits automáticos y deshacer (undo), sobre un fork propio (https://github.com/csrocha/aider) a la espera de integración con el proyecto upstream.}
 
 \cventry{abr 2020-jul 2022}
 	{Ingeniero de Infraestructura para Inteligencia Artificial y Procesamiento de Datos}
